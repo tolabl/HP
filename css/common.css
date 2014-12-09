@@ -47,7 +47,10 @@ footer .copy {
   margin-top: -20px;
   height: 70px;
   background-color: #000011; }
+  footer .copy a {
+    color: #ffffff;
+	text-decoration:none; }
   footer .copy p {
     padding-top: 30px;
     color: #ffffff;
-    text-align: center; }
+    text-align: center;}

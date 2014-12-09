@@ -37,17 +37,6 @@
         <!-- build:js js/head.js -->
         <!--<script src="./lib/modernizr/modernizr.js"></script>-->
         <!-- endbuild -->
-      <script type="text/javascript">
-	    $(function(){
-     $('a img.hovimg').hover(function(){
-        $(this).attr('src', $(this).attr('src').replace('.png', '_on.png'));
-          }, function(){
-             if (!$(this).hasClass('currentPage')) {
-             $(this).attr('src', $(this).attr('src').replace('_on.png', '.png'));
-        }
-   });
-});
-</script>
     </head>
     <body>
     <!-- build:js js/ua.js -->
@@ -125,8 +114,7 @@
 <section class="member" id="member">
 
     <h2 class="member_text">
-        MEMBER
-        <span>メンバー紹介</span>
+     <img src="img/title_member.png" alt="MEMBER" />
     </h2>
 
     <!--レギュラー-->
@@ -137,39 +125,37 @@
         <img src="img/member_tolablkun.png" alt="tolablkun" width="100px" class="tolablkun"/>
 
         <a href="#"><img src="img/member_ouma.png" alt="ouma" width="200px" class="ouma hovimg"/></a>
-<!--		<div class="over ouma">OUMA</div>
--->			
+			
 
-        <img src="img/member_shirahama.png" alt="shirahama" width="200px" class="shirahama"/>
-        <div class="over shirahama">SHIRAHAMA</div>
+        <img src="img/member_shirahama.png" alt="shirahama" width="200px" class="shirahama hovimg"/>
 
-        <img src="img/member_nobi.png" alt="n0bisuke" width="200px" class="n0bisuke"/>
-        <div class="over n0bisuke">n0bisuke</div>
+        <img src="img/member_nobi.png" alt="n0bisuke" width="200px" class="n0bisuke hovimg"/>
 
-        <img src="img/member_chiba.png" alt="chiba" width="200px" class="chiba"/>
-        <div class="over chiba">chiba</div>
+        <img src="img/member_chiba.png" alt="chiba" width="200px" class="chiba hovimg"/>
 
-        <img src="img/member_5.png" alt="5" width="150px" class="five"/>
+        <img src="img/member_5.png" alt="5" width="150px" class="five hovimg"/>
     </div>
 
     <!--セミレギュラー-->
     <div class="semiregular">
         <h3 class="member_sub_text line_bg">TOLABL SEMI REGULAR</h3>
 
-        <img src="img/member_ajico.jpg" alt="ouma"/>
+        <img src="img/member_ryuyamamoto.jpg" alt="chiba"/>
         <img src="img/member_hiderino.jpg" alt="shirahama"/>
         <img src="img/member_imamura.jpg" alt="n0bisuke"/>
+        <img src="img/member_yokonakagawa.jpg" alt="chiba"/>
+        <img src="img/member_riekokawamitsu.jpg" alt="chiba"/>
+        <img src="img/member_makoto.jpg" alt="ouma"/>
+      <img src="img/member_ajico.jpg" alt="ouma"/>
+      <img src="img/member_numagami.jpg" alt="n0bisuke"/>
         <img src="img/member_kato.jpg" alt="chiba"/>
-        <img src="img/member_kubara.jpg" alt="chiba"/>
+      <img src="img/member_otori.jpg" alt="chiba"/>
+      <img src="img/member_haru.jpg" alt="ouma"/>
 
         <img src="img/member_nakamura.jpg" alt="ouma"/>
+      <img src="img/member_kubara.jpg" alt="chiba"/>
         <img src="img/member_nii.jpg" alt="shirahama"/>
-        <img src="img/member_numagami.jpg" alt="n0bisuke"/>
-        <img src="img/member_otori.jpg" alt="chiba"/>
-        <img src="img/member_riekokawamitsu.jpg" alt="chiba"/>
 
-        <img src="img/member_ryuyamamoto.jpg" alt="chiba"/>
-        <img src="img/member_yokonakagawa.jpg" alt="chiba"/>
 
     </div>
 
@@ -204,6 +190,7 @@
                     <li>喫煙</li>
                     <li>騒音注意</li>
                 </ul>
+    <p class="icon_sch"><a href=""><img src="img/sch.png" alt="予定帳" /></a></p>
             </div>
 
         </div>
@@ -324,7 +311,7 @@
             <ul class="ride">
                 <li>浅草駅松屋前のりば</li>
                 <li>南千住行き 東42甲系統</li>
-                <li>コミュニティバス めぐいん</li>
+                <li>コミュニティバス めぐりん</li>
                 <li>北めぐりん 清川二丁目降り場下車 徒歩1分</li>
             </ul>
         </ul>
@@ -348,7 +335,7 @@
         <!--<p>NEWS</p>-->
     <!--</div>-->
     <div class="copy">
-        <p>@2014 RELATION INC. ALL RIGHT RESERVED.</p>
+        <p>&copy;2014 <a href="http://www.relationsgroup.co.jp/">RELATIONS Inc. </a> ALL RIGHT RESERVED.</p>
     </div>
 </footer>
     <!-- build:js js/common.js -->
@@ -372,6 +359,25 @@
     <!-- build:js js/index.js -->
     <script src="./js/lib/jquery.bxslider.min.js"></script>
     <!--<script src="./js/index.js"></script>-->
+      <script type="text/javascript">
+	    $(function(){
+     $('img.hovimg,.semiregular img').hover(function(){
+        $(this).attr('src', $(this).attr('src').replace('.png', '_on.png'));
+          }, function(){
+             if (!$(this).hasClass('currentPage')) {
+             $(this).attr('src', $(this).attr('src').replace('_on.png', '.png'));
+        }
+   });
+     $('.semiregular img').hover(function(){
+        $(this).attr('src', $(this).attr('src').replace('.jpg', '_on.jpg'));
+          }, function(){
+             if (!$(this).hasClass('currentPage')) {
+             $(this).attr('src', $(this).attr('src').replace('_on.jpg', '.jpg'));
+        }
+   });
+
+});
+</script>
 
 <!-- endbuild -->
     
