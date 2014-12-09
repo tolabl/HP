@@ -7,11 +7,12 @@
   font-family: Verdana,"游ゴシック ",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif; }
 
 .slider {
-  height: 400px;
+  height:420px;
   width: 100%;
   margin: 0 auto;
-  position: relative; }
-  .slider img {
+  position: relative;
+ overflow-x: hidden; }
+/*  .slider img {
     position: absolute;
     top: 0px; }
     .slider img.sl1 {
@@ -26,9 +27,59 @@
       right: -5%;
       -webkit-filter: blur(1px);
               filter: blur(1px); }
-    .slider img.logo {
-      top: 130px;
+*/ 
+   .slider img.logo {
+    position: absolute;
+      top: 150px;
       left: 35%; }
+	  
+	  /*スライダー*/
+.slide_all {
+	width: 960px !important; 
+	margin: 0 auto; 
+	position: relative;}
+.slide_wrap {
+	width: 2880px; 
+	position: absolute; 
+	left: 50%; 
+	margin-left: -1440px;} 
+.slide_body {
+	width: 100%;} 
+.slide {
+		width: 960px !important; 
+  height:600px;
+} 
+.slide img {
+	width: 100%; 
+	vertical-align: bottom;
+	}
+
+.bx-controls-direction,.bx-pager {
+	 text-align: center;
+	 height: 25px;} 
+.bx-controls-direction a,.bx-pager-item {
+		 display: inline-block;} 
+.bx-pager-item a{
+			 display: block; 
+			 height: 10px; 
+			 width: 10px; 
+			 text-indent: -9999px; 
+			 background: #000; 
+			 border-radius: 10px; 
+			 margin:10px 2px 0 2px;} 
+.bx-pager-item a.active {
+		opacity: 0.3;} 
+.bx-controls-direction a{
+		text-decoration: none; 
+		color: #000; 
+		padding:0 5px;} 
+.bx-controls {
+			position: absolute;
+			bottom: 5px;
+			z-index: 100;
+			width: 100%;} 
+	/*スライダー*/
+
 
 .main {
   width: 1024px;

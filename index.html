@@ -63,17 +63,28 @@
         <!--トップスライダー-->
         <div class="slider">
     <!--<img src="img/main_logo.png" alt="" class="main_logo" />-->
-    <!--<ul class="bxslider">-->
-        <!--<li><img src="img/sl01.jpg" alt="" width="615px" /></li>-->
-        <!--<li><img src="img/sl02.jpg" alt="" width="615px" /></li>-->
-        <!--<li><img src="img/sl03.jpg" alt="" width="615px" /></li>-->
-    <!--</ul>-->
-
-
-    <img src="img/sl02.jpg" alt="シェアハウスの様子" width="49%" height="400px" class="sl2" />
+<!--    <ul class="bxslider">
+        <li><img src="img/sl01.jpg" alt="" width="615px" /></li>
+        <li><img src="img/sl02.jpg" alt="" width="615px" /></li>
+        <li><img src="img/sl03.jpg" alt="" width="615px" /></li>
+    </ul>
+-->
+<!--    <img src="img/sl02.jpg" alt="シェアハウスの様子" width="49%" height="400px" class="sl2" />
     <img src="img/sl03.jpg" alt="シェアハウスの様子" width="49%" height="400px" class="sl3" />
     <img src="img/sl01.jpg" alt="シェアハウスの様子" width="60%" height="400px" class="sl1" />
+-->
 
+	<div class="slide_all">
+		<div class="slide_wrap">
+			<div class="slide_body">
+				<div class="slide"><img src="img/sl03.jpg"></div>
+				<div class="slide"><img src="img/sl04.jpg"></div>
+				<div class="slide"><img src="img/sl01.jpg"></div>
+				<div class="slide"><img src="img/sl05.jpg"></div>
+				<div class="slide"><img src="img/sl02.jpg"></div>
+			</div>
+		</div>
+	</div>
     <img src="img/sl_logo.png" alt="logo" class="logo" width="400px" />
 </div>
         <!--プロジェクト-->
@@ -125,7 +136,7 @@
         <img src="img/member_text.png" alt="トラブル住人" width="100px" class="member_text"/>
         <img src="img/member_tolablkun.png" alt="tolablkun" width="100px" class="tolablkun"/>
 
-        <a href="#"><img src="img/member_ouma.png" alt="ouma" class="ouma hovimg"/></a>
+        <img src="img/member_ouma.png" alt="ouma" class="ouma hovimg"/>
 			
 
         <img src="img/member_shirahama.png" alt="shirahama" class="shirahama hovimg"/>
@@ -377,6 +388,25 @@
         }
    });
 
+});
+//slider
+$(document).ready(function(){
+    $('.slide_body').bxSlider({
+        mode: 'horizontal',
+        auto: true,
+        pager: false,
+        speed: 1000,
+	slideWidth: 960,
+        controls: true,
+        prevText: '&lt;',
+        nextText: '&gt;',
+        infiniteLoop: true,
+        easing: 'easeOutQuad',
+		minSlides: 3,
+		maxSlides: 5,
+		moveSlides: 1,
+		slideMargin: 0
+    });
 });
 </script>
 
