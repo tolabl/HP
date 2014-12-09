@@ -3,7 +3,9 @@ common style
 =================================================================== */
 body {
   margin: 0 0;
-  width: 100%; }
+  width: 100%; 
+  font-family: Ubuntu,Verdana,"游ゴシック ",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif; }
+
 
 header {
   height: 60px;
@@ -13,7 +15,8 @@ header {
     width: 1024px;
     margin: 0 auto;
     overflow: hidden;
-    padding-top: 6px; }
+    padding-top: 6px;
+	font-weight:bold; }
     header nav img {
       float: left; }
     header nav ul {

@@ -1,9 +1,10 @@
 .line_bg {
   background: url('../img/menu_text_bg.png') no-repeat;
-  background-position: -90px -10px; }
+  background-position: -90px -10px;
+  padding: 3px 0 0 10px; }
 
 .contents {
-  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif; }
+  font-family: Verdana,"游ゴシック ",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif; }
 
 .slider {
   height: 400px;
@@ -43,7 +44,14 @@
     text-align: center; }
     .main .block h3 {
       text-align: left;
-      margin-left: 50px; }
+      margin-left: 50px;
+	  overflow:visible; }
+  .main .block-project {
+    background: url('../img/top_project.png') no-repeat center 20%;}
+  .main .block-member {
+    background: url('../img/top_member.png') no-repeat center 20%;}
+  .main .block-space {
+    background: url('../img/top_space.png') no-repeat center 20%;}
 
 .sub_slider {
   width: 100%;
