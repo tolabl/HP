@@ -163,22 +163,22 @@
           width: 100px;
           height: 100px;
           background-color: red; }
-      .member .regular img.member_text {
+/*      .member .regular img.member_text {
         top: 140px;
         left: 4%; }
-      .member .regular img.ouma {
-        top: 240px;
-        left: 20%; }
-      .member .regular img.shirahama {
-        top: 30px;
-        left: 30%; }
-      .member .regular img.n0bisuke {
+*/      .member .regular .ouma {
         top: 200px;
+        left: 20%; }
+      .member .regular .shirahama {
+        top: -180px;
+        left: 30%; }
+      .member .regular .n0bisuke {
+        top: -210px;
         left: 50%; }
-      .member .regular img.chiba {
-        top: 30px;
+      .member .regular .chiba {
+        top: -560px;
         left: 70%; }
-      .member .regular img.five {
+      .member .regular .five {
         top: 240px;
         left: 80%; }
   .member .semiregular img {
