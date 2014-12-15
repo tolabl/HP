@@ -15,6 +15,12 @@
   margin: 0 auto;
   position: relative;
  overflow-x: hidden; }
+
+ a:hover img{
+    opacity:0.8;
+    -moz-opacity:0.8;
+    filter:alpha(opacity = 80);}
+
 /*  .slider img {
     position: absolute;
     top: 0px; }
@@ -466,6 +472,17 @@ left: 28%;}
   .space_photo .space_img {
     float: left;
     margin: 10px 5px 10px 5px; }
+	hr{
+		clear:both;
+		border:1px solid #f2f2f2;
+	}
+.space_photo h3 {
+	margin-top:30px;
+    text-align: left;
+    overflow: visible;
+  background: url('../img/menu_text_bg.png') no-repeat;
+  background-position: -90px -10px;
+  padding: 3px 0 0 10px; }
 
 .accessAndContact {
   width: 1024px;
