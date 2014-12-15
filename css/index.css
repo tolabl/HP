@@ -2,6 +2,9 @@
   background: url('../img/menu_text_bg.png') no-repeat;
   background-position: -90px -10px;
   padding: 3px 0 0 10px; }
+.line_bg_yellow {
+  background:#FDF984;
+  padding: 3px; }
 
 .contents {
   font-family: Verdana,"游ゴシック ",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif; }
@@ -105,12 +108,107 @@
   .main .block-space {
     background: url('../img/top_space.png') no-repeat center 20%;}
 
+	  /*プロジェクトスライダー*/
+.sub_sliderbox {
+	width: 100%;
+	position: relative;
+	margin: 0 auto; 
+	padding: 50px 0;
+	background:#F8F8F8;
+	overflow:visible;
+	 }
 .sub_slider {
-  width: 100%;
-/*  height: 530px;
-*/  position: relative;
-  margin-top: 50px; }
-  .sub_slider:before {
+	width: 100%;
+	margin: 0 auto; 
+	background:#F8F8F8;
+	 }
+.sub_slider h3{
+	margin: 0 auto;
+	font-size:24px;
+	z-index:10;
+	padding:0 10px;
+	min-height:50px;
+	overflow:visible;
+    background: url('../img/icon_scale_s.png') no-repeat center top;
+}
+
+.sub_slider a:hover img{
+    opacity:0.5;
+    -moz-opacity:0.5;
+    filter:alpha(opacity = 50);
+}
+.sub_slider h3 a{
+    color: #111;
+    -webkit-transition: 0.5s;
+     -moz-transition: 0.5s;
+     -o-transition: 0.5s;
+     -ms-transition: 0.5s;
+     transition: 0.5s;
+	 text-decoration:none;
+}
+.sub_slider h3 a:hover {
+    color: #999;
+}
+.sub_slider p{
+	margin: 0 auto;
+	font-size:16px;
+	text-align:left;
+	padding:10px 0 10px 0;
+	min-height:50px;
+	 }
+.slick-slide{
+	width: 680px !important;
+	margin: 0 auto; 
+}
+.sub_slider .slide {
+	position: relative;
+	width: 580px !important; 
+	height: 360px;
+	border:3px solid #FFF100;
+	text-align:center;
+	margin:0 30px;
+	padding:20px;
+	background:#fff;
+	overflow:visible;
+} 
+.sub_slider .slide img {
+	width: 100%; 
+	max-width:600px;
+	vertical-align: bottom;
+	margin:0 auto 10px auto;
+	 box-shadow: rgba(113,135,164,.65098) 3px 3px 6px 3px;
+-webkit-box-shadow: rgba(113,135,164,.65098) 3px 3px 6px 3px;
+-moz-box-shadow: rgba(113,135,164,.65098) 3px 3px 6px 3px;
+	}
+
+.project-num{
+	position:absolute;
+	bottom:3%;
+	left:1%;
+	display:inline-block;
+	width:60px;
+	height:60px;
+	z-index:1;
+	background-color:#FFF100;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	text-align: center; 
+	color: #000; 
+	margin: 0;
+	padding:0;
+	font-size:24px; 
+}
+.project-num span{
+position: absolute;
+top: 30%;
+left: 28%;}
+
+.sub_sliderbox .project_sub_text {
+    margin-left: 10px;
+	text-align:center; }
+ 
+/*  .sub_slider:before {
     display: block;
     width: 250px;
     height: 250px;
@@ -120,11 +218,69 @@
     top: -70px;
     left: 60%;
     content: " "; }
+*/
+/*.sub_slider .slide_all {
+	width: 680px !important; 
+  height: 400px;
+	margin: 0 auto; 
+	position: relative; }
+.sub_slider .slide_wrap {
+	width: 2040px; 
+	position: absolute; 
+	left: 50%; 
+	margin-left: -1020px;} 
+.sub_slider .slide_body {
+	width: 100%;} 
+.sub_slider .slide {
+	width: 580px !important; 
+  height: 360px;
+	border:3px solid #FFF100;
+  text-align:center;
+  margin:0 30px;
+  padding:20px;
+	background:#fff;
+} 
+.sub_slider .slide img {
+	width: 100%; 
+	max-width:600px;
+	vertical-align: bottom;
+	margin:10px auto;
+	}
+
+*/
+/*.sub_slider .bx-controls-direction,.bx-pager {
+	 text-align: center;
+	 height: 25px;} 
+.sub_slider .bx-controls-direction a,.bx-pager-item {
+		 display: inline-block;} 
+.sub_slider .bx-pager-item a{
+			 display: block; 
+			 height: 10px; 
+			 width: 10px; 
+			 text-indent: -9999px; 
+			 background: #000; 
+			 border-radius: 10px; 
+			 margin:10px 2px 0 2px;} 
+.sub_slider .bx-pager-item a.active {
+		opacity: 0.3;} 
+.sub_slider .bx-controls-direction a{
+		text-decoration: none; 
+		color: #000; 
+		padding:0 5px;} 
+.sub_slider .bx-controls {
+			position: absolute;
+			bottom: 5px;
+			z-index: 100;
+			width: 100%;} 
+*/
+	/*プロジェクトスライダー end*/
 
 .member {
   width: 1024px;
   margin: 0 auto;
-  padding:20px 0; }
+  padding:20px 0;
+  clear:both;
+  overflow:hidden; }
   .member .member_text {
     margin-left: 10px; }
     .member .member_text span {
@@ -132,7 +288,67 @@
   .member .regular {
     position: relative;
     height: 400px; }
-    .member .regular .over {
+     .member .regular div {
+     width: 200px;
+	padding:0 5px 10px 5px;
+	min-height:235px;
+}
+     .member .regular div p{
+	font-size:13px;
+	padding:0 0 0 5px;
+}
+	.member .regular div h3{	
+	    background: url('../img/member_line.png') no-repeat left bottom;
+		background-size:100px 30px;
+		margin:0;
+		padding:5px 0 0 10px;
+}
+	.member .regular div h4{	
+	    background: url('../img/member_line.png') no-repeat left bottom;
+		background-size:100px 30px;
+		margin:0;
+		padding:5px 0 0 10px;
+}
+     .member .regular .imgline {
+     width: 200px;
+}
+     .member .regular .imgline-five {
+     width: 120px;
+    border-radius: 300px;
+	border:3px solid #FFF100;
+	background: #FFF100;}
+     .member .regular .ouma {
+	float:left;
+    margin: 0px 20px 10px 20px; }
+      .member .regular .shirahama {
+	float:left;
+    margin: 0px 20px 10px 20px; }
+      .member .regular .n0bisuke {
+	float:left;
+    margin: 0px 20px 10px 20px; }
+      .member .regular .chiba {
+	float:left;
+    margin: 0px 20px 10px 20px; }
+      .member .regular .five_text {
+	clear:both;
+	float:left;
+    margin: 15px 20px 10px 20px; 
+	padding:15px;
+    border-radius: 30px;
+	border:3px solid #ddd;
+	max-width:670px;
+	
+}
+      .member .regular .five {
+	float:right;
+    margin: 15px 20px 10px 20px; 
+}
+.member a:hover img{
+    opacity:0.8;
+    -moz-opacity:0.8;
+    filter:alpha(opacity = 80);}
+
+/*    .member .regular .over {
       display: block;
       width: 100px;
       height: 100px;
@@ -163,10 +379,10 @@
           width: 100px;
           height: 100px;
           background-color: red; }
-/*      .member .regular img.member_text {
+      .member .regular img.member_text {
         top: 140px;
         left: 4%; }
-*/      .member .regular .ouma {
+     .member .regular .ouma {
         top: 200px;
         left: 20%; }
       .member .regular .shirahama {
@@ -181,13 +397,37 @@
       .member .regular .five {
         top: 240px;
         left: 80%; }
+*/ 
+  .member .semiregular {
+	  clear:both;
+}
   .member .semiregular img {
     width: 150px;
     border-radius: 300px;
 	border:3px solid #FFF100;
     margin: 0px 20px 10px 20px; }
 
+     .member .semiregular div {
+     width: 180px;
+	 float:left;
+	padding:5px 5px 10px 5px;
+	min-height:240px;
+}
+     .member .semiregular div p{
+	font-size:13px;
+		margin:0;
+		padding:5px 0 0 5px;
+}
+	.member .semiregular div h4{	
+	    background: url('../img/member_line.png') no-repeat left bottom;
+		background-size:80px 30px;
+		font-size:16px;
+		margin:0;
+		padding:5px 0 0 10px;
+}
+/*スペース*/
 .space {
+  clear:both;
   width: 100%;
   margin: 0 auto;
   background:url(../img/space_bg.png) repeat-x;
@@ -235,6 +475,7 @@
     float: left;
     margin-right: 30%;
     width: 30%; }
+
   .accessAndContact .access {
     font-weight: normal; }
     .accessAndContact .access .means {
