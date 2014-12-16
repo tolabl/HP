@@ -45,10 +45,9 @@
     <!--<script src="js/lib/ua.js"></script>-->
     <!-- endbuild -->
 
-
-
+<div id="wrap">
 <header>
-    <nav> <a href="./"><img src="img/head_logo.png" alt="TOLABL"/></a>
+    <nav> <a href="./"><img src="img/head_logo.png" alt="TOLABL" id="ptop"/></a>
 
         <ul>
           <li><a href="#project">PROJECT</a></li>
@@ -560,6 +559,7 @@ TOLABL　TV　メディア</h3>
 
     <div class="sns">
         <div class="fb">
+            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Ftolabl&amp;width&amp;height=100&amp;colorscheme=light&amp;show_faces=false&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=436584686439169" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:100px;" allowTransparency="true"></iframe>
         </div>
 
         <div class="tweet">
@@ -568,7 +568,9 @@ TOLABL　TV　メディア</h3>
         </div>
     </div>
 </div> 
-
+<p id="back-top">
+     <a href="#wrap"><img src="img/btn_top.png" alt="Topへ戻る" /></a>
+ </p>
    </div>
 
 
@@ -580,7 +582,8 @@ TOLABL　TV　メディア</h3>
         <p>&copy;2014 <a href="http://www.relationsgroup.co.jp/">RELATIONS Inc. </a> ALL RIGHT RESERVED.</p>
     </div>
 </footer>
-    <!-- build:js js/common.js -->
+     </div>
+   <!-- build:js js/common.js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 				
@@ -702,7 +705,6 @@ $(document).ready(function(){
         });
 $(function () {
 
-    //動作しない時のために、クリックイベントにリスナーを追加しておく。
     $('.slick-next').on('click', function () {
         slick.slickNext();
     });
@@ -710,6 +712,54 @@ $(function () {
         slick.slickPrev();
     });
 });
+
+//ヘッダー固定
+$(function() {
+var bt = $("header").offset().top;
+var ds = -1;
+ 
+$(document).scroll(function(){
+    ds = $(this).scrollTop();
+ 
+    if (bt <= ds) { 
+        $("header").addClass('follow');
+    } else if (bt >= ds) {
+        $("header").removeClass('follow');
+    }
+    });
+});
+//ページtopへ戻る
+$("#back-top").hide();
+
+$(function () {
+    $(window).scroll(function () {
+        //100pxスクロールしたら
+        if ($(this).scrollTop() > 100) {
+            //フェードインで表示
+            $('#back-top').fadeIn();
+        } else {
+            $('#back-top').fadeOut();
+        }
+    });
+});
+
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top -60;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+
     </script>
 <!-- endbuild -->
 
