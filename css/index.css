@@ -6,6 +6,15 @@
   background:#FDF984;
   padding: 3px; }
 
+.line_bg_yellow a {
+    text-decoration: none;
+    color: #333;
+    background:none;
+}
+.line_bg_yellow a:hover {
+    color: #999;
+}
+
 #wrap {
   font-family: Ubuntu,Verdana,"游ゴシック ",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
   position: relative; }
